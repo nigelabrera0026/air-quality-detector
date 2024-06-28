@@ -1,0 +1,68 @@
+<!-------w------------
+
+    Assignment 4
+    Name: Nigel Abrera
+    Date: 09/27/2023
+    Description: Fetching Data using AJAX
+
+--------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="script.js"></script>
+		<link rel="stylesheet" href="main.css" />
+		<title>My Open Data Assignment</title>
+	</head>
+	<body>
+		<header>
+			<h1>Winnipeg's Air Quality</h1>
+		</header>
+		<main>
+			<form id="searchForm">
+				<label for="search">Search the quality of the air in specific parts of Winnipeg</label><br>
+				<input type="search" id="search" name="search" placeholder="Search any location in Winnipeg"/>
+				<button type="submit"> Search </button> 
+			</form>
+			<div id="wrapper"> 
+				<div id="filterBar">
+					<label for="display">Display: </label>
+					<select name="countDisplay" id="display">
+						<option value="40">40</option>
+						<option value="60" selected>60</option>
+						<option value="100">100</option>
+						<option value="120">120</option>
+					</select>
+				</div>
+				<table id="dataList">
+					<thead id="tHead">
+						<tr>
+							<td>
+								Observation ID
+								<select name="sort" id="sort">
+									<option value="ASC">▲</option>
+									<option value="DESC" selected>▼</option>
+								</select>
+							</td>
+							<td>Observation Time</td>
+							<td>Thing ID</td>
+							<td>Location Name</td>
+							<td>Measurement Type</td>
+							<td>Measurement Value</td>
+							<td>Measurement Unit</td>
+							<td>Location</td>
+							<td>Point</td>
+						</tr>
+					</thead>
+					<tbody id="tBody"></tbody>
+				</table>
+			</div>
+		</main>
+		<footer>
+			<p>Created By Nigel Abrera</p>
+		</footer>
+	</body>
+</html>
